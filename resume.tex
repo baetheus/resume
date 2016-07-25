@@ -1,13 +1,12 @@
 \documentclass{article}
 \usepackage[a4paper, left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{multicol}
-\usepackage{fancyhdr}
- 
+\usepackage{multicol, fancyhdr, hyperref, parskip}
 
-%%% \job{Company}{Title}{Date Range}
-\newcommand{\job}[3]{
-\bigskip
+\parskip=1em
+
+%%% \split{Top Left}{Bottom Left}{Bottom Right}
+\newcommand{\split}[3]{
 \noindent\begin{tabular}[t]{@{}l} 
     \textbf{#1} \\ #2
 \end{tabular}
@@ -19,41 +18,69 @@
 \noindent\rule{\columnwidth}{0.5pt}
 }
 
+%%% \sub{Title}
+\newcommand{\sub}[1]{
+    {\raggedleft
+        \large{\textsc{\color{OliveGreen}#1}}\par
+    }
+}
+
 %%% Header
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\Huge{\textbf{Brandon Blaylock}}}
-\rhead{\color{Gray}\small{(949) 288-3884 $\cdot$ brandon@null.pub}}
+\rhead{\color{OliveGreen}\small{(949) 288-3884 $\cdot$ brandon@null.pub}}
 \rfoot{Last updated \today.}
-
 
 \begin{document}
 \begin{multicols}{2}
 
-{\raggedleft
-    \large{\textsc{\color{PineGreen}Work Experience}}\par
-}
+\sub{Work Experience}
 
-\job{Keyboard Cowboys}{IT Consultant}{Oct 2006 - Present}
-I operate a consulting firm for small businesses focused on \textbf{systems administration}, \textbf{web design}, \textbf{hosting}, hardware and software \textbf{break fix}, \textbf{full stack development}, \textbf{network administration}, \textbf{system workflow design}, and \textbf{performance analysis} for small and medium sized businesses. Clients range in size from individual home users to businesses with 20+ servers and 100+ desktops under service.
+\split{Keyboard Cowboys}{IT Consultant}{Oct 2006 - Present}
+I operate a local consulting firm for small and medium sized businesses. During peak periods, the firm manages an average of 15 contracted customers each month with a combined average footprint of 32 servers, 180 workstations, and 7 business networks. Services provided cover \textbf{systems administration}, \textbf{custom application development}, \textbf{break fix}, and \textbf{web development}. In most cases, customers were able to reduce their IT budget to \$250 per month by switching to Keyboard Cowboys.
 
-\job{Shoutpoint}{Systems Administrator}{Sept 2013 -- Dec 2015}
-Built out and \textbf{maintained critical infrastructure} components from \textbf{physical networks and servers} to \textbf{application deployment}. \textbf{Developed internal tools} in \textbf{Bash} and \textbf{Node.js} for the automation of the virtual machine build system. This tool required coordinating resources across 5 geographically diverse data centers. Developed and implemented tools that managed and updated internal \textbf{yum and apt repositories} as well as handled the regular deployment of \textbf{Puppet} infrastructure and application code.
+\split{Shoutpoint}{Systems Administrator}{Sept 2013 -- Dec 2015}
+Designed and maintained critical infrastructure components from the physical networks and servers to application deployment workflow. Developed most of the internal IT tooling in \textbf{Bash} and \textbf{Node.js} to automate a custom \textbf{Xen} virtual machine build system. These internal tools required coordinating resources across 5 geographically diverse data centers and ultimately reduced build time from days to minutes. Developed and implemented tooling that managed and updated internal \textbf{yum} and \textbf{apt} repositories as well as handled the regular deployment of Puppet infrastructure and application code. Introduced the IT and applications departments to version control for infrastructure code. Designed \textbf{Puppet} modules to handle dynamically building internal \textbf{DNS} and \textbf{NTP} servers.
 
-\job{GoDaddy.com}{Data Center Engineer}{Aug 2007 -- Aug 2010}
-Was responsible for the build out and maintenance of \textbf{enterprise level data centers} across a private MAN. \textbf{Trained} and assessed the skills of junior technicians in proprietary software, hardware proficiency, and company workflow. \textbf{Headed critical deployments} for front of site and infrastructure upgrades for the datacenter team. Acted as \textbf{final tier of customer support} for dedicated and virtual machine customers. Compiled and edited all internal documentation created by the datacenter team. Created and maintained the data center team \textbf{knowledge base}.
+\split{GoDaddy.com}{Data Center Engineer}{Aug 2007 -- Aug 2010}
+I was responsible for the build out and maintenance of \textbf{enterprise level data centers} across a private MAN in the Phoenix metropolitan area. \textbf{Trained} and assessed the skills of junior technicians in proprietary software, hardware proficiency, and company workflow. \textbf{Headed critical deployments} for front of site and infrastructure upgrades for the data center team. Acted as the \textbf{final tier of customer support} for dedicated and virtual machine customers. Compiled and edited all internal documentation created by the datacenter team. Created and maintained the data center team \textbf{knowledge base}.
 
-\job{Magenta Computer}{Technician}{Aug 2001 -- Aug 2004}
-Was responsible for \textbf{parts inventory}, custom desktop and \textbf{server manufacturing}, hardware and software \textbf{troubleshooting}, and \textbf{data recovery}.
+\split{Magenta Computer}{Technician}{Aug 2001 -- Aug 2004}
+Was responsible for \textbf{parts inventory}, custom desktop and \textbf{server manufacturing}, hardware and software \textbf{troubleshooting}, and \textbf{data recovery}. I cut my teeth here on everything from Intel's 486DX2 to the first Xeons and beyond. At the end of my tenure I had built over 4000 desktop and server computers and repaired about half that many.
 
 \columnbreak
 
-I am looking for interesting, detailed work that involves deep understanding of computer systems from the user interface to the bare metal. 
+\sub{Summary}
+Unix administrator with a background in full stack tools development. Direct experience with the design and implementation of build system workflow, re-engineering encumbered systems, and performance analysis. Operating system and build chain agnostic, although I have a soft spot for SmartOS and OS X. My theoretical background in mathematics lends itself handily to general problem solving, rigorous analysis, and implementation nuances. I'm a strong proponent of the idea that systems and systems software can and should be provably correct.
 
-\bigskip
+\sub{Software Skills}
+\begin{tabular}{r|p{60mm}}
+\textsc{Excellent} & SmartOS, Linux, Unix, Windows, Node.js, DNS, Puppet, TFTP, DHCP, Nginx, Xen, KVM, Ipfilter, Ansible, ZFS, Bash, OS X \\
+\textsc{Intermediate} & Python, FreeBSD, MySQL, dtrace, Redis, Apache, \LaTeX, \TeX \\
+\textsc{Basic} & Photoshop, SolidWorks
+\end{tabular}
 
-Hello, here is some text without a meaning.  This text should show what 
-a printed text will look like at this place. If you read this text, you will get no information.  Really?  Is there no information?  Is there... 
+\sub{Hardware Skills}
+\begin{tabular}{r|p{60mm}}
+\textsc{Excellent} & Dell x86 Servers, Serial Connection Pinouts, Apple Hardware, Data Center Design, Fiber and Copper cabling, Teensy 2.0, Beaglebone Black \\
+\textsc{Intermediate} & CHIP, Teensy 3.2
+\end{tabular}
+
+\sub{Public Projects}
+\split{nullbot-core}{\href{https://github.com/baetheus/nullbot-core}{github.com/baetheus/nullbot-core}}{June 2016}
+A bot framework for \href{https://telegram.org}{Telegram} written in nodejs that implements a connect-like middleware control structure.
+
+\split{shoutapi}{\href{https://github.com/baetheus/shoutapi}{github.com/baetheus/shoutapi}}{December 2015}
+An api client library and event handler written in nodejs for the \href{http://shoutpoint.com}{Shoutpoint} \href{https://dev-shoutpointapi.devportal.apigee.com}{developer api}.
+
+\split{documentation}{\href{https://gist.github.com/baetheus}{gist.github.com/baetheus}}{Ongoing}
+This is a repository of various public documentation that I have created over time. It includes primarily setup processes for open source software on SmartOS zones as well as some small bash scripts for SmartOS management.
+
+\sub{Education}
+\split{Bachelors of Science in Mathematics}{University of California, Irvine}{2014 - 2017}
+I am currently a part time student in my last year of study at UCI. My focus is in pure math with particular attention paid to Abstract Algebra and Galois Theory.
+
 \end{multicols}
  
 \end{document}
