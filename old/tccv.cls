@@ -31,7 +31,11 @@
 
 \setcounter{secnumdepth}{-1}
 \RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
-\RequirePackage{bookman,etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
+\RequirePackage{etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
+
+\newcommand\textbox[1]{%
+  \parbox{.5\textwidth}{#1}%
+}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
@@ -129,9 +133,9 @@
     \newcommand*\inskip{}
     \renewcommand\item[3]{%
 	\inskip%
-	{\raggedleft\sc ##1\\[1pt]}
+	{\raggedleft\normalfont\scshape ##1\\[1pt]}
 	{##2}\\[2pt]
-	{\Large\it ##3}
+	{\Large\normalfont\itshape ##3}
 	\medskip
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
@@ -144,9 +148,9 @@
 % ]|
 \newenvironment{yearlist}{%
     \renewcommand\item[4][]{%
-	{\sc ##2} & {\bfseries ##3} \\
-	\ifstrempty{##1}{}{& {\sc ##1} \\}
-	& {\it ##4}\medskip\\}
+	{\normalfont \scshape ##2} & {\bfseries ##3} \\
+	\ifstrempty{##1}{}{& {\normalfont \scshape ##1} \\}
+	& {\normalfont \itshape ##4}\medskip\\}
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
 

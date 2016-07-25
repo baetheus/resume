@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[a4paper, left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+ 
+
+%%% \job{Company}{Title}{Date Range}
+\newcommand{\job}[3]{
+\bigskip
+\noindent\begin{tabular}[t]{@{}l} 
+    \textbf{#1} \\ #2
+\end{tabular}
+\hfill
+\begin{tabular}[t]{l@{}}
+    \\
+    \textit{#3}
+\end{tabular}
+\noindent\rule{\columnwidth}{0.5pt}
+}
+
+%%% Header
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\Huge{\textbf{Brandon Blaylock}}}
+\rhead{\color{Gray}\small{(949) 288-3884 $\cdot$ brandon@null.pub}}
+\rfoot{Last updated \today.}
+
+
+\begin{document}
+\begin{multicols}{2}
+
+{\raggedleft
+    \large{\textsc{\color{PineGreen}Work Experience}}\par
+}
+
+\job{Keyboard Cowboys}{IT Consultant}{Oct 2006 - Present}
+I operate a consulting firm for small businesses focused on \textbf{systems administration}, \textbf{web design}, \textbf{hosting}, hardware and software \textbf{break fix}, \textbf{full stack development}, \textbf{network administration}, \textbf{system workflow design}, and \textbf{performance analysis} for small and medium sized businesses. Clients range in size from individual home users to businesses with 20+ servers and 100+ desktops under service.
+
+\job{Shoutpoint}{Systems Administrator}{Sept 2013 -- Dec 2015}
+Built out and \textbf{maintained critical infrastructure} components from \textbf{physical networks and servers} to \textbf{application deployment}. \textbf{Developed internal tools} in \textbf{Bash} and \textbf{Node.js} for the automation of the virtual machine build system. This tool required coordinating resources across 5 geographically diverse data centers. Developed and implemented tools that managed and updated internal \textbf{yum and apt repositories} as well as handled the regular deployment of \textbf{Puppet} infrastructure and application code.
+
+\job{GoDaddy.com}{Data Center Engineer}{Aug 2007 -- Aug 2010}
+Was responsible for the build out and maintenance of \textbf{enterprise level data centers} across a private MAN. \textbf{Trained} and assessed the skills of junior technicians in proprietary software, hardware proficiency, and company workflow. \textbf{Headed critical deployments} for front of site and infrastructure upgrades for the datacenter team. Acted as \textbf{final tier of customer support} for dedicated and virtual machine customers. Compiled and edited all internal documentation created by the datacenter team. Created and maintained the data center team \textbf{knowledge base}.
+
+\job{Magenta Computer}{Technician}{Aug 2001 -- Aug 2004}
+Was responsible for \textbf{parts inventory}, custom desktop and \textbf{server manufacturing}, hardware and software \textbf{troubleshooting}, and \textbf{data recovery}.
+
+\columnbreak
+
+I am looking for interesting, detailed work that involves deep understanding of computer systems from the user interface to the bare metal. 
+
+\bigskip
+
+Hello, here is some text without a meaning.  This text should show what 
+a printed text will look like at this place. If you read this text, you will get no information.  Really?  Is there no information?  Is there... 
+\end{multicols}
+ 
+\end{document}
