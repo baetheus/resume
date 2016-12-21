@@ -7,7 +7,7 @@
 
 %%% \split{Top Left}{Bottom Left}{Bottom Right}
 \newcommand{\split}[3]{
-\noindent\begin{tabular}[t]{@{}l} 
+\noindent\begin{tabular}[t]{@{}l}
     \textbf{#1} \\ #2
 \end{tabular}
 \hfill
@@ -28,7 +28,7 @@
 %%% Header
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\Huge{\textbf{Brandon Blaylock}}}
+\lhead{\Huge{\textbf{Brandon Blaylock αβγ}}}
 \rhead{\color{OliveGreen}\small{(949) 288-3884 $\cdot$ \href{mailto:brandon@null.pub}{brandon@null.pub}}}
 \rfoot{Last updated \today.}
 
@@ -41,7 +41,7 @@
 I operate a local consulting firm for small and medium sized businesses. During peak periods, the firm manages an average of 15 contracted customers each month with a combined average footprint of 32 servers, 180 workstations, and 7 business networks. Services provided cover \textbf{systems administration}, \textbf{custom application development}, \textbf{break fix}, and \textbf{web development}. In most cases, customers were able to reduce their IT budget to \$250 per month by switching to Keyboard Cowboys.
 
 \split{Shoutpoint}{Systems Administrator}{Sept 2013 -- Dec 2015}
-Designed and maintained critical infrastructure components from the physical networks and servers to application deployment workflow. Developed most of the internal IT tooling in \textbf{Bash} and \textbf{Node.js} to automate a custom \textbf{Xen} virtual machine build system. These internal tools required coordinating resources across 5 geographically diverse data centers and ultimately reduced build time from days to minutes. Developed and implemented tooling that managed and updated internal \textbf{yum} and \textbf{apt} repositories as well as handled the regular deployment of Puppet infrastructure and application code. Introduced the IT and applications departments to version control for infrastructure code. Designed \textbf{Puppet} modules to handle dynamically building internal \textbf{DNS} and \textbf{NTP} servers.
+Designed and maintained critical infrastructure components from the physical networks and servers to application deployment workflow. Developed most of the internal IT tooling in \textbf{Bash} and \textbf{Node.js} to automate a custom \textbf{Xen} virtual machine build system. This automated build system used \textbf{Ansible}, \textbf{Ansible Playbooks}, and \textbf{Custom Ansible Modules} that coordinated physical resources, networking resources, vm creation, and bootstrapping internal applications. Developed and implemented tooling that managed and updated internal \textbf{yum} and \textbf{apt} repositories as well as handled the regular deployment of Puppet infrastructure and application code. Introduced the IT and applications departments to version control for infrastructure code. Designed \textbf{Puppet} modules to handle dynamically building internal \textbf{DNS} and \textbf{NTP} servers.
 
 \split{GoDaddy.com}{Data Center Engineer}{Aug 2007 -- Aug 2010}
 I was responsible for the build out and maintenance of \textbf{enterprise level data centers} across a private MAN in the Phoenix metropolitan area. \textbf{Trained} and assessed the skills of junior technicians in proprietary software, hardware proficiency, and company workflow. \textbf{Headed critical deployments} for front of site and infrastructure upgrades for the data center team. Acted as the \textbf{final tier of customer support} for dedicated and virtual machine customers. Compiled and edited all internal documentation created by the datacenter team. Created and maintained the data center team \textbf{knowledge base}.
@@ -68,19 +68,19 @@ Unix administrator with a background in full stack tools development. Direct exp
 \end{tabular}
 
 \sub{Public Projects}
+\split{redilex}{\href{https://github.com/baetheus/redilex}{github.com/baetheus/redilex}}{December 2016}
+An naive orm for redis that enables easy management of similar hashes as well as lexicographical searching.
+
 \split{nullbot-core}{\href{https://github.com/baetheus/nullbot-core}{github.com/baetheus/nullbot-core}}{June 2016}
 A bot framework for \href{https://telegram.org}{Telegram} written in nodejs that implements a connect-like middleware control structure.
 
 \split{shoutapi}{\href{https://github.com/baetheus/shoutapi}{github.com/baetheus/shoutapi}}{December 2015}
 An api client library and event handler written in nodejs for the \href{http://shoutpoint.com}{Shoutpoint} \href{https://dev-shoutpointapi.devportal.apigee.com}{developer api}.
 
-\split{documentation}{\href{https://gist.github.com/baetheus}{gist.github.com/baetheus}}{Ongoing}
-This is a repository of various public documentation that I have created over time. It includes primarily setup processes for open source software on SmartOS zones as well as some small bash scripts for SmartOS management.
-
 \sub{Education}
 \split{Bachelors of Science in Mathematics}{University of California, Irvine}{2014 - 2017}
 I am currently a part time student in my last year of study at UCI. My focus is in pure math with particular attention paid to Abstract Algebra and Galois Theory.
 
 \end{multicols}
- 
+
 \end{document}
