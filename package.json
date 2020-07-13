@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/baetheus/resume#readme",
   "devDependencies": {
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.1"
   }
 }
